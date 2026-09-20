@@ -57,9 +57,14 @@ python scripts/simulate_flight.py
 app/                 FastAPI 服务与 Web 页面
 docs/                产品和设备接入设计
 scripts/             巡飞模拟器
+firmware/esp32s3/     ESP32-S3 智能伴随模组固件
 tests/               API 测试
 data/                 本地运行数据（不入库）
 ```
+
+硬件首版建议使用“Pixhawk 飞控 + ESP32-S3 N16R8 伴随模组”，详见
+[`docs/HARDWARE.md`](docs/HARDWARE.md)。ESP32-S3 固件的构建和烧录说明位于
+[`firmware/esp32s3/README.md`](firmware/esp32s3/README.md)。
 
 ## License
 
