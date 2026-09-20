@@ -66,6 +66,9 @@ data/                 本地运行数据（不入库）
 [`docs/HARDWARE.md`](docs/HARDWARE.md)。ESP32-S3 固件的构建和烧录说明位于
 [`firmware/esp32s3/README.md`](firmware/esp32s3/README.md)。
 
+- [硬件连接示意图](docs/assets/hardware-connection.svg)
+- [产品原型图与页面说明](docs/PROTOTYPE.md)
+
 ## License
 
 Apache-2.0
