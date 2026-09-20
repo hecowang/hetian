@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">故乡守望产品原型图</title>
+  <desc id="desc">包含今日故乡、时间轴、前后对比和飞行任务四个核心产品页面。</desc>
+  <defs><style>
+    .bg{fill:#ece9e0}.screen{fill:#faf8f2;stroke:#cbc5b8;stroke-width:2}.bar{fill:#27372f}.hero{fill:#dce3d8}.card{fill:#fff;stroke:#ded9cf;stroke-width:1.5}.photo1{fill:#97aa8c}.photo2{fill:#c4ad82}.photo3{fill:#7f9cab}.accent{fill:#476451}.warn{fill:#c17838}.ink{fill:#24332b}.muted{fill:#69766f}.white{fill:#fff}.h1{font:700 28px Georgia,serif}.h2{font:700 20px Georgia,serif}.t{font:500 14px system-ui,sans-serif}.s{font:500 12px system-ui,sans-serif}.nav{font:600 13px system-ui,sans-serif}.line{stroke:#d6d0c4;stroke-width:2}.route{fill:none;stroke:#476451;stroke-width:5;stroke-linecap:round;stroke-dasharray:3 10}.pin{fill:#476451;stroke:#fff;stroke-width:3}
+  </style></defs>
+  <rect class="bg" width="1800" height="1200"/>
+  <text class="ink h1" x="55" y="55">故乡守望 · 产品原型</text><text class="muted t" x="55" y="85">核心体验：打开应用，30 秒内知道故乡今天发生了什么</text>
+
+  <!-- Screen 1 -->
+  <g transform="translate(55 125)"><rect class="screen" rx="16" width="820" height="480"/><rect class="bar" rx="16" width="820" height="58"/><rect class="bar" y="30" width="820" height="28"/><text class="white h2" x="28" y="37">故乡守望</text><text class="white nav" x="545" y="36">今日故乡　时间轴　飞行任务</text>
+  <rect class="hero" x="24" y="82" rx="12" width="772" height="130"/><text class="muted s" x="50" y="111">9 月 20 日 · 第 36 次巡飞</text><text class="ink h1" x="50" y="151">稻田开始泛黄，河水比上周更清。</text><text class="ink t" x="50" y="182">今天记录了 5 个熟悉的地方，没有发现需要立即关注的异常。</text>
+  <text class="ink h2" x="24" y="255">今天的新画面</text>
+  <g transform="translate(24 275)"><rect class="card" rx="10" width="238" height="170"/><rect class="photo1" rx="10" width="238" height="112"/><path d="M0 85Q60 45 125 86T238 62V112H0Z" fill="#66805a"/><circle cx="190" cy="28" r="17" fill="#f0d58d"/><text class="ink t" x="14" y="138">村口田野</text><text class="muted s" x="14" y="158">09:31 · 42m</text></g>
+  <g transform="translate(286 275)"><rect class="card" rx="10" width="238" height="170"/><rect class="photo2" rx="10" width="238" height="112"/><rect x="65" y="40" width="108" height="72" fill="#735848"/><path d="M50 45L120 5L190 45Z" fill="#55453e"/><text class="ink t" x="14" y="138">老房子</text><text class="muted s" x="14" y="158">09:34 · 35m</text></g>
+  <g transform="translate(548 275)"><rect class="card" rx="10" width="248" height="170"/><rect class="photo3" rx="10" width="248" height="112"/><path d="M0 58Q70 36 125 61T248 52" fill="none" stroke="#dbe5ec" stroke-width="28"/><text class="ink t" x="14" y="138">村边小河</text><text class="muted s" x="14" y="158">09:38 · 30m</text></g></g>
+
+  <!-- Screen 2 -->
+  <g transform="translate(925 125)"><rect class="screen" rx="16" width="820" height="480"/><rect class="bar" rx="16" width="820" height="58"/><rect class="bar" y="30" width="820" height="28"/><text class="white h2" x="28" y="37">时间轴</text><text class="white nav" x="600" y="36">地点：老房子⌄</text>
+  <line class="line" x1="105" y1="100" x2="105" y2="440"/>
+  <circle class="pin" cx="105" cy="145" r="9"/><text class="muted s" x="35" y="150">今天</text><rect class="card" x="135" y="92" rx="10" width="630" height="125"/><rect class="photo2" x="150" y="107" rx="7" width="160" height="95"/><rect x="196" y="140" width="68" height="62" fill="#735848"/><path d="M185 143L230 115L275 143Z" fill="#55453e"/><text class="ink h2" x="335" y="132">院前的树叶少了一些</text><text class="muted t" x="335" y="164">与上周相比，屋顶和墙体没有明显变化</text><text class="ink s" x="335" y="190">查看前后对比 →</text>
+  <circle class="pin" cx="105" cy="286" r="9"/><text class="muted s" x="25" y="291">9 月 13</text><rect class="card" x="135" y="238" rx="10" width="630" height="95"/><text class="ink h2" x="160" y="274">秋天的第一场雨后</text><text class="muted t" x="160" y="304">屋前道路有少量积水，次日已消退</text>
+  <circle class="pin" cx="105" cy="402" r="9"/><text class="muted s" x="25" y="407">8 月 30</text><rect class="card" x="135" y="355" rx="10" width="630" height="92"/><text class="ink h2" x="160" y="391">夏末记录</text><text class="muted t" x="160" y="421">树冠茂盛，院门保持关闭</text></g>
+
+  <!-- Screen 3 -->
+  <g transform="translate(55 655)"><rect class="screen" rx="16" width="820" height="480"/><rect class="bar" rx="16" width="820" height="58"/><rect class="bar" y="30" width="820" height="28"/><text class="white h2" x="28" y="37">前后对比 · 老房子</text>
+  <text class="muted s" x="30" y="90">2026-08-30</text><text class="muted s" x="430" y="90">2026-09-20</text>
+  <rect class="photo1" x="28" y="105" rx="10" width="368" height="240"/><rect class="photo2" x="424" y="105" rx="10" width="368" height="240"/>
+  <g transform="translate(28 105)"><rect x="105" y="92" width="158" height="148" fill="#735848"/><path d="M82 98L184 30L286 98Z" fill="#55453e"/><circle cx="60" cy="74" r="47" fill="#54754e"/></g>
+  <g transform="translate(424 105)"><rect x="105" y="92" width="158" height="148" fill="#735848"/><path d="M82 98L184 30L286 98Z" fill="#55453e"/><circle cx="60" cy="74" r="41" fill="#887b48"/></g>
+  <rect class="card" x="28" y="367" rx="10" width="764" height="85"/><text class="ink h2" x="50" y="400">AI 发现的变化</text><text class="ink t" x="50" y="429">树冠颜色转黄、叶量减少；房屋主体、屋顶和院门未见明显变化。</text></g>
+
+  <!-- Screen 4 -->
+  <g transform="translate(925 655)"><rect class="screen" rx="16" width="820" height="480"/><rect class="bar" rx="16" width="820" height="58"/><rect class="bar" y="30" width="820" height="28"/><text class="white h2" x="28" y="37">飞行任务</text><rect class="hero" x="24" y="82" rx="12" width="500" height="365"/>
+  <path class="route" d="M95 365C155 300 145 175 265 160S420 220 455 126"/><circle class="pin" cx="95" cy="365" r="11"/><circle class="pin" cx="190" cy="222" r="11"/><circle class="pin" cx="338" cy="179" r="11"/><circle class="pin" cx="455" cy="126" r="11"/><text class="ink s" x="70" y="400">屋顶起降点</text><text class="ink s" x="130" y="205">村口</text><text class="ink s" x="300" y="155">老房子</text><text class="ink s" x="468" y="130">田野</text>
+  <rect class="card" x="548" y="82" rx="12" width="248" height="236"/><text class="muted s" x="572" y="112">任务状态</text><text class="ink h2" x="572" y="145">已安全返航</text><text class="ink t" x="572" y="184">照片　5 / 5</text><text class="ink t" x="572" y="216">电量　43%</text><text class="ink t" x="572" y="248">用时　12分38秒</text><rect class="accent" x="572" y="274" rx="8" width="196" height="30"/><text class="white nav" x="621" y="295">查看本次记录</text>
+  <rect class="card" x="548" y="338" rx="12" width="248" height="109"/><text class="muted s" x="572" y="368">下一次计划</text><text class="ink h2" x="572" y="400">周日 09:30</text><text class="muted s" x="572" y="426">天气合适时才执行</text></g>
+</svg>
