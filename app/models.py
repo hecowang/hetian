@@ -35,3 +35,13 @@ class Digest(BaseModel):
     headline: str
     summary: str
     highlights: list[str]
+
+
+class DeviceEventCreate(BaseModel):
+    device_id: str = Field(min_length=1, max_length=100)
+    event: str = Field(min_length=1, max_length=100)
+    place_id: str = Field(default="", max_length=100)
+    lat: float | None = None
+    lon: float | None = None
+    altitude_m: float | None = None
+    battery_percent: int | None = Field(default=None, ge=0, le=100)
