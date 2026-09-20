@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">故乡守望无人机硬件连接示意图</title>
+  <desc id="desc">动力系统、Pixhawk飞控、ESP32-S3伴随模组、相机、存储和云端之间的供电及数据连接。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f4f1e8}.panel{fill:#fff;stroke:#d5d0c5;stroke-width:2}.flight{fill:#e8f0eb;stroke:#476451;stroke-width:3}.edge{fill:#e7eef2;stroke:#315c73;stroke-width:3}.power{fill:#fff0df;stroke:#b86d2e;stroke-width:3}.cloud{fill:#efebf5;stroke:#73558c;stroke-width:3}.title{font:700 34px system-ui,sans-serif;fill:#203029}.sub{font:500 19px system-ui,sans-serif;fill:#5c6b63}.h{font:700 24px system-ui,sans-serif;fill:#203029}.t{font:500 17px system-ui,sans-serif;fill:#34463d}.small{font:500 15px system-ui,sans-serif;fill:#66756d}.data{fill:none;stroke:#315c73;stroke-width:4;marker-end:url(#arrowBlue)}.pwr{fill:none;stroke:#b86d2e;stroke-width:5;marker-end:url(#arrowOrange)}.safe{fill:none;stroke:#476451;stroke-width:4;marker-end:url(#arrowGreen)}.dash{stroke-dasharray:10 8}.label{fill:#fff;stroke:#d5d0c5;stroke-width:1}.pin{font:600 14px ui-monospace,monospace;fill:#315c73}
+    </style>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3L0 6Z" fill="#315c73"/></marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3L0 6Z" fill="#b86d2e"/></marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L10 3L0 6Z" fill="#476451"/></marker>
+  </defs>
+  <rect class="bg" width="1600" height="1000"/>
+  <text class="title" x="70" y="68">故乡守望 · 无人机硬件连接示意图</text>
+  <text class="sub" x="70" y="102">P1 原型：飞控安全域与产品智能域完全解耦</text>
+
+  <rect class="power" x="70" y="165" rx="18" width="275" height="235"/>
+  <text class="h" x="100" y="210">动力与供电</text>
+  <text class="t" x="100" y="255">动力电池 4S / 6S</text>
+  <text class="t" x="100" y="290">├─ 电调 ESC → 电机</text>
+  <text class="t" x="100" y="325">├─ 飞控电源模块</text>
+  <text class="t" x="100" y="360">└─ 独立 5V / 3A BEC</text>
+  <text class="small" x="100" y="385">所有数字接口共地</text>
+
+  <rect class="flight" x="480" y="145" rx="18" width="385" height="300"/>
+  <text class="h" x="515" y="190">飞控安全域</text>
+  <text class="t" x="515" y="235">Pixhawk 6C Mini / H7</text>
+  <text class="t" x="515" y="273">PX4 或 ArduPilot</text>
+  <rect class="panel" x="515" y="300" rx="9" width="145" height="90"/>
+  <text class="pin" x="535" y="333">TELEM2 TX</text><text class="pin" x="535" y="360">TELEM2 RX</text>
+  <rect class="panel" x="680" y="300" rx="9" width="145" height="90"/>
+  <text class="small" x="702" y="333">GPS / 罗盘</text><text class="small" x="702" y="360">遥控 / 数传</text>
+  <text class="small" x="515" y="420">独立完成：围栏、低电、失联返航、降落</text>
+
+  <rect class="edge" x="1040" y="145" rx="18" width="430" height="355"/>
+  <text class="h" x="1075" y="190">故乡智能模组</text>
+  <text class="t" x="1075" y="230">ESP32-S3-WROOM-1-N16R8</text>
+  <rect class="panel" x="1075" y="258" rx="9" width="160" height="92"/>
+  <text class="pin" x="1095" y="291">UART RX / TX</text><text class="small" x="1095" y="321">MAVLink 2</text>
+  <rect class="panel" x="1260" y="258" rx="9" width="170" height="92"/>
+  <text class="pin" x="1280" y="291">SDMMC 4-bit</text><text class="small" x="1280" y="321">离线缓存</text>
+  <rect class="panel" x="1075" y="370" rx="9" width="160" height="92"/>
+  <text class="pin" x="1095" y="403">DVP / FPC</text><text class="small" x="1095" y="433">OV5640</text>
+  <rect class="panel" x="1260" y="370" rx="9" width="170" height="92"/>
+  <text class="pin" x="1280" y="403">I²C / GPIO</text><text class="small" x="1280" y="433">INA226 / 看门狗</text>
+
+  <path class="pwr" d="M345 300H445V245H480"/>
+  <rect class="label" x="365" y="225" rx="8" width="92" height="30"/><text class="small" x="380" y="246">飞控供电</text>
+  <path class="pwr" d="M345 345H940V205H1040"/>
+  <rect class="label" x="765" y="322" rx="8" width="135" height="30"/><text class="small" x="780" y="343">独立 5V BEC</text>
+  <path class="data" d="M865 345H1040"/>
+  <rect class="label" x="893" y="305" rx="8" width="120" height="30"/><text class="small" x="908" y="326">UART · 3.3V</text>
+
+  <rect class="panel" x="1040" y="595" rx="18" width="200" height="135"/>
+  <text class="h" x="1070" y="638">OV5640</text><text class="t" x="1070" y="674">5MP 定点照片</text><text class="small" x="1070" y="703">固定焦距 / 固定姿态</text>
+  <rect class="panel" x="1270" y="595" rx="18" width="200" height="135"/>
+  <text class="h" x="1300" y="638">MicroSD</text><text class="t" x="1300" y="674">32–128 GB</text><text class="small" x="1300" y="703">高耐久 / 原子落盘</text>
+  <path class="data" d="M1140 595V500"/>
+  <path class="data" d="M1370 595V500"/>
+
+  <rect class="cloud" x="480" y="610" rx="18" width="385" height="210"/>
+  <text class="h" x="515" y="655">Hetian 云端</text>
+  <text class="t" x="515" y="697">照片归档 · 时间轴 · 前后对比</text>
+  <text class="t" x="515" y="733">VLM 变化摘要 · YOLO 目标计数</text>
+  <text class="small" x="515" y="775">HTTPS + SHA-256 确认后才清理本地文件</text>
+  <path class="data dash" d="M1040 475C930 500 940 650 865 680"/>
+  <rect class="label" x="895" y="555" rx="8" width="125" height="30"/><text class="small" x="910" y="576">Wi-Fi / 4G</text>
+
+  <rect class="flight" x="70" y="610" rx="18" width="275" height="210"/>
+  <text class="h" x="100" y="655">安全原则</text>
+  <text class="t" x="100" y="697">• 云端离线仍能返航</text>
+  <text class="t" x="100" y="733">• 模组死机不影响飞控</text>
+  <text class="t" x="100" y="769">• 人工可随时接管</text>
+  <path class="safe" d="M345 715H440V445H530"/>
+
+  <text class="small" x="70" y="935">橙色：供电　蓝色：数据　绿色：安全控制边界　｜　量产前需按实际开发板重新完成引脚复核、EMC 与峰值功耗测试</text>
+</svg>
