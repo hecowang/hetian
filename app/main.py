@@ -10,7 +10,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from .analyzer import build_digest
-from .models import Digest, Mission, MissionCreate, Observation
+from .models import DeviceEventCreate, Digest, Mission, MissionCreate, Observation
 from .store import MEDIA_DIR, ROOT, connect, init_db, row_to_observation
 
 
@@ -32,6 +32,18 @@ def home():
 @app.get("/healthz")
 def healthz():
     return {"status": "ok"}
+
+
+@app.post("/api/device-events", status_code=202)
+def create_device_event(payload: DeviceEventCreate):
+    received_at = datetime.now(timezone.utc).isoformat()
+    with connect() as db:
+        cur = db.execute(
+            "INSERT INTO device_events(device_id, event, place_id, received_at, payload) VALUES (?, ?, ?, ?, ?)",
+            (payload.device_id, payload.event, payload.place_id, received_at,
+             payload.model_dump_json()),
+        )
+    return {"accepted": True, "event_id": cur.lastrowid, "received_at": received_at}
 
 
 @app.post("/api/missions", response_model=Mission, status_code=201)
