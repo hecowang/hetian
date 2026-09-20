@@ -1,0 +1,31 @@
+menu "Hometown Keeper"
+
+config HETIAN_WIFI_SSID
+    string "Wi-Fi SSID"
+    default ""
+
+config HETIAN_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+
+config HETIAN_API_URL
+    string "Telemetry API URL"
+    default "http://192.168.1.10:8000/api/device-events"
+
+config HETIAN_DEVICE_ID
+    string "Device ID"
+    default "hetian-edge-01"
+
+config HETIAN_UART_RX_GPIO
+    int "Flight controller UART RX GPIO"
+    default 18
+
+config HETIAN_UART_TX_GPIO
+    int "Flight controller UART TX GPIO"
+    default 17
+
+config HETIAN_UART_BAUD
+    int "Flight controller UART baud"
+    default 921600
+
+endmenu
