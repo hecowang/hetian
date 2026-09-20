@@ -42,6 +42,14 @@ def init_db() -> None:
             );
             CREATE INDEX IF NOT EXISTS idx_observation_place_time
               ON observations(place_id, captured_at DESC);
+            CREATE TABLE IF NOT EXISTS device_events (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              device_id TEXT NOT NULL,
+              event TEXT NOT NULL,
+              place_id TEXT NOT NULL DEFAULT '',
+              received_at TEXT NOT NULL,
+              payload TEXT NOT NULL
+            );
             """
         )
 
